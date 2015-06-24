@@ -1,0 +1,174 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="menu.css" />
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+<style type="text/css">
+#categories ul li a:hover,
+#categories ul li a.current,
+#menu li.item:hover {
+  background-color: rgba(231, 217, 195, 1);
+}
+
+#categories ul li a,
+h1, h2 {
+  color: #7c0e17;
+}
+
+h2.categories-header {
+  margin-bottom: 10px;
+}
+
+/* header customizations */
+#restaurantInfo {
+  display: none;
+}
+
+#head_wrap {
+  text-align: center;
+}
+
+#header {
+  background: none repeat scroll 0% 0% #FFF7BC;
+  border-bottom: 1px solid #FFDE80;
+  margin-top: 0;
+}
+
+</style>
+<>
+</head>
+<body>
+	
+
+    <div id="container">
+	
+		<!-- Categories -->
+		<div id="categories" class="column">
+			<h2 class="categories-header">Categories</h2>
+			<ul id="category_list">
+				<li class="SmallPlates"><a href="#Small_Plates">Small Plates</a></li>
+				<li class="Sandwiches"><a href="#Sandwiches">Sandwiches</a></li>
+				<li class="Entrees"><a href="#Entrees">Entrees</a></li>
+				<li class="Drinks"><a href="#Drinks">Drinks</a></li>
+				<li class="Desserts"><a href="#Desserts">Desserts</a></li>
+				<li class="Catering"><a href="#Catering">Catering</a></li>
+			</ul>
+		</div>
+		<!-- End Categories -->	
+		
+		<!-- Menu -->
+		<div id="menu" class="column">
+		
+			<div>
+				<h2>SmallPlates</h2>
+				<ul>
+					<li class="item clearfix">
+						<form data-item-name="Bacon Wrapped Scallops with Shrimp" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Bacon Wrapped Scallops with Shrimp</div>
+							</div>
+						</form>
+					</li>
+					<li class="item clearfix">
+						<form data-item-name="Chicken Tacos" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Chicken Tacos</div>
+							</div>
+						</form>
+					</li>
+					<li class="item clearfix">
+						<form data-item-name="Smoked Salmon and Trout" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Smoked Salmon and Trout</div>
+							</div>
+						</form>
+					</li>
+				</ul>
+			</div>
+			
+			<div>
+				<h2>Sandwiches</h2>
+				<ul>
+					<li class="item clearfix">
+						<form data-item-name="Gyro" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Gyro</div>
+							</div>
+						</form>
+					</li>
+					<li class="item clearfix">
+						<form data-item-name="Reuben" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Reuben</div>
+							</div>
+						</form>
+					</li>
+					<li class="item clearfix">
+						<form data-item-name="Veggie Melt" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Veggie Melt</div>
+							</div>
+						</form>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<h2>Entrees</h2>
+				<ul>
+					<li class="item clearfix">
+						<form data-item-name="Pizza" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Pizza</div>
+							</div>
+						</form>
+					</li>
+					<li class="item clearfix">
+						<form data-item-name="Fried Rice" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Fried Rice</div>
+							</div>
+						</form>
+					</li>
+					<li class="item clearfix">
+						<form data-item-name="Pad Ging" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Pad Ging</div>
+							</div>
+						</form>
+					</li>
+				</ul>
+			</div>
+			
+			<div>
+				<h2>Drinks</h2>
+				<ul>
+					<li class="item clearfix">
+						<form data-item-name="Soda" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Soda</div>
+							</div>
+						</form>
+					</li>
+					<li class="item clearfix">
+						<form data-item-name="Milk" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Milk</div>
+							</div>
+						</form>
+					</li>
+					<li class="item clearfix">
+						<form data-item-name="Coffee" method="post" action="/orders">
+							<div class="item_header clearfix">
+								<div class="item-info">Coffee</div>
+							</div>
+						</form>
+					</li>
+				</ul>
+			</div>
+		
+		</div>
+		<!-- Menu -->
+	</div>
+
+</body>
+</html>

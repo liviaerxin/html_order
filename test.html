@@ -33,11 +33,59 @@ h2.categories-header {
   margin-top: 0;
 }
 
+.test li{
+	display: inline;
+}
+.test {
+	display: block;
+	position: absolute;
+	top: 42px;
+	right: 0px;
+}
+.test span{
+	display: inline;
+}
 </style>
-<>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://bootstrapdocs.com/v3.2.0/docs/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#menu div").hide();
+
+  	
+         
+         $(".SmallPlates > a").on('mouseenter',function(e){
+            $('.test ').slideDown('slow');
+            return false;
+         });
+
+         
+
+
+
+  	$(".SmallPlates").click(function(){
+  		$("#menu div").hide();
+    	$("#SmallPlates, #SmallPlates div").show();
+  	});
+  	$(".Sandwiches").click(function(){
+  		$("#menu div").hide();
+    	$("#Sandwiches, #Sandwiches div").show();
+  	});
+  	$(".Entrees").click(function(){
+  		$("#menu div").hide();
+    	$("#Entrees, #Entrees div").show();
+  	});
+  	$(".Drinks").click(function(){
+  		$("#menu div").hide();
+    	$("#Drinks, #Drinks div").show();
+  	});
+});
+</script>
+<script src>
+</script>
 </head>
 <body>
-	
+
 
     <div id="container">
 	
@@ -45,7 +93,12 @@ h2.categories-header {
 		<div id="categories" class="column">
 			<h2 class="categories-header">Categories</h2>
 			<ul id="category_list">
-				<li class="SmallPlates"><a href="#Small_Plates">Small Plates</a></li>
+				<li class="SmallPlates"><a href="#Small_Plates" >Small Plates</a>
+					<ul class="test">
+						<li><span class="btn" href="#A">A</span></li>
+						<li><span href="#B">B</span></li>
+					</ul>
+				</li>
 				<li class="Sandwiches"><a href="#Sandwiches">Sandwiches</a></li>
 				<li class="Entrees"><a href="#Entrees">Entrees</a></li>
 				<li class="Drinks"><a href="#Drinks">Drinks</a></li>
@@ -58,7 +111,7 @@ h2.categories-header {
 		<!-- Menu -->
 		<div id="menu" class="column">
 		
-			<div>
+			<div id="SmallPlates">
 				<h2>SmallPlates</h2>
 				<ul>
 					<li class="item clearfix">
@@ -85,7 +138,7 @@ h2.categories-header {
 				</ul>
 			</div>
 			
-			<div>
+			<div id="Sandwiches">
 				<h2>Sandwiches</h2>
 				<ul>
 					<li class="item clearfix">
@@ -112,7 +165,7 @@ h2.categories-header {
 				</ul>
 			</div>
 
-			<div>
+			<div id="Entrees">
 				<h2>Entrees</h2>
 				<ul>
 					<li class="item clearfix">
@@ -139,7 +192,7 @@ h2.categories-header {
 				</ul>
 			</div>
 			
-			<div>
+			<div id="Drinks">
 				<h2>Drinks</h2>
 				<ul>
 					<li class="item clearfix">

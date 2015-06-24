@@ -147,7 +147,7 @@ body {
   width: 210px;          /* LC width */
   margin-left:0px;
   padding: 0 10px 0 20px;
-  left: 290px;          /* RC width for IE6 */
+  left: 0px;          /* RC width for IE6 */
 }
 #order {
   width: 250px;          /* RC width */
@@ -159,7 +159,7 @@ body {
 }
 
 #container > #categories {
-  left: 0px;           /* -(LC fullwidth + CC padding) */
+  left: auto;           /* -(LC fullwidth + CC padding) */
   margin-left: expression(
    document.all.menu.offsetWidth * -1 +
    -30 +

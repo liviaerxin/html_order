@@ -1,0 +1,411 @@
+<html><head>
+
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="docs.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://bootstrapdocs.com/v3.2.0/docs/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#myModal').on('show.bs.modal', function(e){
+		var button=$(e.relatedTarget);
+		var re=button.data('message');
+		var modal=$(this);
+		
+		modal.find('.modal-body input').val(re);
+	});
+	
+	$(".test1").on('click',function(e){
+	$("#Page1").show();
+	})
+	
+	$(".test2").on('click',function(e){
+	$("#Page2").show();
+	})
+})
+</script>
+</head>
+<style type="text/css">
+.close{
+	display:none
+}
+.sub-menu{
+	top:0;
+	margin-left:100px;
+}
+</style>
+<body>
+	
+	<div class="container">
+		<div class="row show-grid close">
+			<div class="col-md-9">col-md-9</div>
+			<div class="col-md-3">col-md-3</div>
+		</div>
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary btn-lg close" data-toggle="modal" data-target="#myModal" data-message="@chen">
+		  Launch demo modal
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">¡Á</span></button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="container-fluid">
+				<div class="row show-grid">
+					<div class="col-md-9">col-md-9</div>
+					<div class="col-md-3">col-md-3</div>
+				</div>
+				</div>
+				<form>
+				  <div class="form-group">
+					<label for="recipient-name" class="control-label">Recipient:</label>
+					<input type="text" class="form-control" id="recipient-name" value="">
+				  </div>
+				  <div class="form-group">
+					<label for="message-text" class="control-label">Message:</label>
+					<textarea class="form-control" id="message-text"></textarea>
+				  </div>
+				</form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
+		<div class="row show-grid">
+			<div class="col-md-3">
+			<ul>
+		<li>
+			<div class="dropdown">
+			<a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			  Dropdown1
+			  <span class="caret"></span>
+			</a>
+			<ul id="menu1" class="dropdown-menu sub-menu" aria-labelledby="drop1">
+			<li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#Page1" class="test1">Page 1</a></li>
+					<li><a href="#" class="test2">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			</ul>
+			</div>
+		</li>
+		<li>
+			<div class="dropdown">
+			<a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			  Dropdown2
+			  <span class="caret"></span>
+			</a>
+			<ul id="menu1" class="dropdown-menu sub-menu" aria-labelledby="drop2">
+			<li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			</ul>
+			</div>
+		</li>
+		<li>
+			<div class="dropdown">
+			<a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			  Dropdown3
+			  <span class="caret"></span>
+			</a>
+			<ul id="menu1" class="dropdown-menu sub-menu" aria-labelledby="drop3">
+			<li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			</ul>
+			</div>
+		</li>
+		<li>
+			<div class="dropdown">
+			<a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			  Dropdown4
+			  <span class="caret"></span>
+			</a>
+			<ul id="menu1" class="dropdown-menu sub-menu" aria-labelledby="drop4">
+			<li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			  <li>
+			  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header ">
+				  <a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li> 
+					<li><a href="#">Page 3</a></li> 
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+			</li>
+			</ul>
+			</div>
+		</li>
+		</ul>
+			</div>
+			<div class="col-md-9">
+			<p id="Page1" class="close">Page1</p>
+			<p id="Page2" class="close">Page2</p>
+			</div>
+		</div>
+		
+		<!--Dropdowm-->
+		
+	</div>
+
+
+</body></html>

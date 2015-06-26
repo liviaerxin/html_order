@@ -1,0 +1,161 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="nav.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://bootstrapdocs.com/v3.2.0/docs/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+  <div class="row show-grid">
+    <!--------------------->
+    <!--Navigation Bar-->
+    <div class="col-md-3">	
+      <div class="navbar navbar-default">
+        
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Categories</a>
+        </div>
+        
+        <!-- Dropdown Menu Pills-->
+        <ul class="nav nav-pills nav-stacked">
+        	<!-- Menu 1-->
+        	<li class="dropdown">
+              	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Sandwiches</a>
+                <!-- Sub Menu -->
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                  <div class="container-fluid">
+                    <!-- Sub Menu1 NavBar Header and Menu Pills-->
+                    <div class="row">
+                      
+                      <li>
+                        <div class="navbar navbar-default">
+                           <div class="navbar-header">
+                              <a class="navbar-brand" href="#">Class A</a>
+                           </div>
+                           <ul class="nav nav-pills">
+                                <li><a data-toggle="pill" href="#ObjectA1">ObjectA1</a></li>
+                                <li><a data-toggle="pill" href="#ObjectA2">ObjectA2</a></li>
+                                <li><a data-toggle="pill" href="#ObjectA3">ObjectA3</a></li>
+                                <li><a data-toggle="pill" href="#ObjectA4">ObjectA4</a></li>
+                                <li><a data-toggle="pill" href="#ObjectA5">ObjectA5</a></li>
+                           </ul>
+                        </div>
+                      </li>
+                    </div>
+                    
+                    
+                  	
+                    
+                    
+                    <!-- Sub Menu2 NavBar-->
+                    <div class="row"> 
+                  		<li>
+                        <div class="navbar navbar-default">
+                           <div class="navbar-header">
+                              <a class="navbar-brand" href="#">Class B</a>
+                           </div>
+                           <ul class="nav nav-pills">
+                                <li><a data-toggle="pill" href="#ObjectB1">ObjectB1</a></li>
+                                <li><a data-toggle="pill" href="#ObjectB2">ObjectB2</a></li>
+                                <li><a data-toggle="pill" href="#ObjectB3">ObjectB3</a></li>
+                                <li><a data-toggle="pill" href="#ObjectB4">ObjectB4</a></li>
+                                <li><a data-toggle="pill" href="#ObjectB5">ObjectB5</a></li>
+                           </ul>
+                        </div>
+                      </li>
+                    </div>
+                    
+                  </div>
+                </ul>
+                
+            </li>
+           
+            <li><a href="#">Drinks</a></li>
+            <li><a href="#">Fruits</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">More</a></li>
+            <li><a href="#">Options</a></li>
+        </ul>
+        
+       </div> 
+     </div>
+    <!--End Navigation Bar-->
+    
+    
+    <!--------------------->
+    <!--Content-->
+    <div class="col-md-9">
+      <div class="row"><h2>Content</h2></div>
+     
+      
+      <div class="row">
+        <div class="container-fluid content">
+      	<div class="tab-content">
+            <div id="ObjectA1" class="tab-pane fade in active">
+              <!--ObjectA1 Goods with Pills-->
+              <h3>ObjectA1</h3>
+              	<ul class="nav nav-pills nav-stacked">
+                  	<li><a href="#myModal" data-toggle="modal" data-target="#myModal">myModal</a></li>
+                    <li><a data-toggle="pill" href="#Coffe">Coffe</a></li>
+                    <li><a data-toggle="pill" href="#Milk">Milk</a></li>
+                    <li><a data-toggle="pill" href="#Soda">Soda</a></li>
+                </ul>
+            </div>
+            <div id="ObjectA2" class="tab-pane fade">
+              <!--ObjectA2 Goods with Pills-->
+              <h3>ObjectA2</h3>
+              	<ul class="nav nav-pills nav-stacked">
+                    <li><a data-toggle="pill" href="#Apple">Apple</a></li>
+                    <li><a data-toggle="pill" href="#Banana">Banana</a></li>
+                    <li><a data-toggle="pill" href="#Orange">Orange</a></li>
+                </ul>
+            </div>
+            <div id="ObjectA3" class="tab-pane fade">
+              <!--ObjectA3 Goods with Pills-->
+              <h3>ObjectA3</h3>
+              	<ul class="nav nav-pills nav-stacked">
+                    <li><a data-toggle="pill" href="#Ios">Ios</a></li>
+                    <li><a data-toggle="pill" href="#Windows">Windows</a></li>
+                    <li><a data-toggle="pill" href="#Android">Android</a></li>
+                </ul>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    <!--End Content-->
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

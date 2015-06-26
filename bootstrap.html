@@ -16,11 +16,15 @@ $(document).ready(function(){
 	
 	$(".test1").on('click',function(e){
 	$("#Page1").show();
-	})
+	});
 	
 	$(".test2").on('click',function(e){
 	$("#Page2").show();
-	})
+	});
+	
+	$(".btn").on('mouseenter',function(e){
+	$("#myModal").modal("show");
+	});
 })
 </script>
 </head>
@@ -41,12 +45,12 @@ $(document).ready(function(){
 			<div class="col-md-3">col-md-3</div>
 		</div>
 		<!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary btn-lg close" data-toggle="modal" data-target="#myModal" data-message="@chen">
+		<button type="button" class="btn btn-primary btn-lg" data-message="@chen">
 		  Launch demo modal
 		</button>
 
 		<!-- Modal -->
-		<div class="modal fade" id="myModal">
+		<div class="modal fade " id="myModal">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">

@@ -1,18 +1,20 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="nav.css">
+<link re>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="http://bootstrapdocs.com/v3.2.0/docs/dist/js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="nav.js"></script>
 </head>
 <body>
 
 
-<div class="container">
+<div class="container-fluid">
   <div class="row show-grid">
-    <!--------------------->
-    <!--Navigation Bar-->
-    <div class="col-md-3">	
+    
+    <!-- Navigation Bar-->
+    <div class="col-md-2">  
       <div class="navbar navbar-default">
         
         <div class="navbar-header">
@@ -21,9 +23,9 @@
         
         <!-- Dropdown Menu Pills-->
         <ul class="nav nav-pills nav-stacked">
-        	<!-- Menu 1-->
-        	<li class="dropdown">
-              	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Sandwiches</a>
+          <!-- Menu 1-->
+          <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sandwiches</a>
                 <!-- Sub Menu -->
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                   <div class="container-fluid">
@@ -47,12 +49,12 @@
                     </div>
                     
                     
-                  	
+                    
                     
                     
                     <!-- Sub Menu2 NavBar-->
                     <div class="row"> 
-                  		<li>
+                      <li>
                         <div class="navbar navbar-default">
                            <div class="navbar-header">
                               <a class="navbar-brand" href="#">Class B</a>
@@ -85,21 +87,39 @@
     <!--End Navigation Bar-->
     
     
-    <!--------------------->
+    
     <!--Content-->
-    <div class="col-md-9">
-      <div class="row"><h2>Content</h2></div>
+    <div class="col-md-8">
+      
      
       
       <div class="row">
         <div class="container-fluid content">
-      	<div class="tab-content">
+        <div class="tab-content">
             <div id="ObjectA1" class="tab-pane fade in active">
               <!--ObjectA1 Goods with Pills-->
               <h3>ObjectA1</h3>
-              	<ul class="nav nav-pills nav-stacked">
-                  	<li><a href="#myModal" data-toggle="modal" data-target="#myModal">myModal</a></li>
-                    <li><a data-toggle="pill" href="#Coffe">Coffe</a></li>
+                <ul class="nav nav-pills nav-stacked">
+                    <!-- toggle modal
+          <li><a href="#myModal" data-toggle="modal" data-target="#myModal">myModal</a></li>
+          -->
+                    <li><a href="#myModal" data-toggle="collapse" data-target="#collapseMyModal">myModal
+                      <div class="collapse" id="collapseMyModal">
+                        <div>myModal description is ..........</div>
+                        <div class="add-btn btn" href="#" data-whatever="myModal">Add to List</div>
+                      </div>
+                      </a>
+                      
+                    </li>
+                    
+                    <li>
+                      <a href="#Coffee" data-toggle="collapse" data-target="#collapseCoffee">Coffee
+                      <div class="collapse" id="collapseCoffee">
+                        <div>coffee description is ..........</div>
+                        <div class="add-btn btn" href="#" data-whatever="coffee">Add to List</div>
+                      </div>
+                      </a>
+                    </li>
                     <li><a data-toggle="pill" href="#Milk">Milk</a></li>
                     <li><a data-toggle="pill" href="#Soda">Soda</a></li>
                 </ul>
@@ -107,7 +127,7 @@
             <div id="ObjectA2" class="tab-pane fade">
               <!--ObjectA2 Goods with Pills-->
               <h3>ObjectA2</h3>
-              	<ul class="nav nav-pills nav-stacked">
+                <ul class="nav nav-pills nav-stacked">
                     <li><a data-toggle="pill" href="#Apple">Apple</a></li>
                     <li><a data-toggle="pill" href="#Banana">Banana</a></li>
                     <li><a data-toggle="pill" href="#Orange">Orange</a></li>
@@ -116,7 +136,7 @@
             <div id="ObjectA3" class="tab-pane fade">
               <!--ObjectA3 Goods with Pills-->
               <h3>ObjectA3</h3>
-              	<ul class="nav nav-pills nav-stacked">
+                <ul class="nav nav-pills nav-stacked">
                     <li><a data-toggle="pill" href="#Ios">Ios</a></li>
                     <li><a data-toggle="pill" href="#Windows">Windows</a></li>
                     <li><a data-toggle="pill" href="#Android">Android</a></li>
@@ -135,19 +155,84 @@
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="modal">×</button>
             <h4 class="modal-title">Modal Header</h4>
+            <h1 class="business-desc">business description</h1>
           </div>
           <div class="modal-body">
-            <p>Some text in the modal.</p>
+            <!--user input form-->
+            <form class="form">
+              <div class="row">
+                <!--first column-->
+                <div class="col-md-6">
+                  
+                  <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="Address">Addres</label>
+                    <input type="text" class="form-control" id="address">
+                  </div>
+                  
+                </div>
+                <!--End first column>
+                <!--second column-->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="Phone Number">Phone Number</label>
+                    <input type="text" class="form-control" id="phone-number">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="text" class="form-control" id="email">
+                  </div>
+                </div>
+                <!--End sencod column-->
+              </div>
+            </form>
+            <!--End user input form-->
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
           </div>
         </div>
         
       </div>
     </div>
+    <!--End Modal-->
+    <!--Shopping List -->
+    <div class="col-md-2">
+      <h4>Shopping List</h4>
+      <!--items in shopping list-->
+      <ul id="shopping-list" class="nav nav-pills nav-stacked">
+        <li data-name="myModal">
+          <div class="desc">myModal</div> 
+          <div class="btn remove-btn">
+      <a href="#"><span class="glyphicon glyphicon-remove red" aria-hidden="true"></span></a>
+          </div>
+        </li>              
+      </ul>
+      <!--End items in shopping list-->
+      <!--submit button-->
+      <div class="btn btn-primary" id="submit-btn" href="#">
+        Submit
+      </div>
+      <!--End submit button-->
+      <p id="test" data-name="liesasd">test parameters</p>
+    </div>
+    <!--End Shopping List-->
+    <!--Template-->
+    
+    <li class="template hidden" data-name="aaa">
+      <div class="desc">myModal</div> 
+      <div class="btn remove-btn">
+        <a href="#"><span class="glyphicon glyphicon-remove red" aria-hidden="true"></span></a>
+      </div>
+    </li>   
   </div>
 </div>
 

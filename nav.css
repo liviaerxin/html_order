@@ -32,3 +32,28 @@
     border: 100px;
     background-color:white;
 }
+.form-group{
+  width:100%;
+}
+.add-btn{
+  margin-left:80%;
+    background-color:white;
+}
+.remove-btn{
+  margin-left:20%;
+}
+.hidden{
+  display:none;
+}
+.desc{
+  float:left;
+  padding:6px;
+  width:50%;
+  margin-left:1px;
+}
+#submit-btn{
+  float: none;
+  margin-left: 25%;
+  font-size: 12px;
+} background-color:white;
+}

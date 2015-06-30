@@ -1,7 +1,132 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="detail-form.css">
+<link re>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="detail-form.js"></script>
 </head>
 <body>
-	<h1>detail form</h1>
+
+<div class="container-fluid">
+  <div class="row">
+    
+    <!--Items Detail Form-->
+    <div class="col-md-9">
+      
+      <div class="tabbable">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#item1" data-toggle="tab">Section 1</a></li>
+          <li><a href="#item2" data-toggle="tab">Section 2</a></li>
+        </ul>
+        <form class="tab-content" action="http://127.0.0.1:7000/commit" method="post" id="items">
+          <!--item 1-->
+		  
+          <div class="tab-pane active" id="item1">
+            <p>I'm in Section 1.</p>
+            
+            <!--Detail Form-->
+            
+              <div class="container-fluid">
+                <div class="row">
+                  
+                  <div class="col-md-4">
+                    <div class="form-group">
+                     <label for="InputName">Name</label>
+                     <input type="text" class="form-control" name="name" placeholder="Enter name">
+                   	</div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                     <div class="form-group">
+                       <label for="InputAge">Age</label>
+                       <input type="text" class="form-control" name="age" placeholder="Enter age">
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                     <div class="form-group">
+                       <label for="InputPhoneNumber">PhoneNumber</label>
+                       <input type="text" class="form-control" name="phone-number" placeholder="Enter phone number">
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                     <div class="form-group">
+                       <label for="InputAddress">address</label>
+                       <input type="text" class="form-control" name="address" placeholder="Enter address">
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                     <div class="form-group">
+                       <label for="InputDate">date</label>
+                       <input type="text" class="form-control" name="date" placeholder="Enter date">
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="InputDate">pay method</label>
+                      <select class="form-control" name="pay"><option>Cash</option><option>Credit</option></select>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+             
+            
+             
+            
+            <!--End Detail Form-->
+          </div>
+          
+          <!--item 2-->
+          <div class="tab-pane" id="item2">
+            <p>I'm in Section 2.</p>
+            <div class="container-fluid">
+                <div class="row">
+                  
+                  <div class="col-md-4">
+                    <div class="form-group">
+                     <label for="InputName">Email1</label>
+                     <input type="text" class="form-control" name="email1" placeholder="Enter name">
+                   	</div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                     <div class="form-group">
+                       <label for="InputAge">Age</label>
+                       <input type="text" class="form-control" name="age1" placeholder="Enter age">
+                     </div>
+                  </div>
+                  
+                </div>
+              </div>
+          </form>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    <!--End Items Detail Form-->
+    
+    <!--Item Description-->
+    <div class="col-md-3">
+      <div class="desc"><h1>selected item description is ......</h1></div>
+    </div>
+    <!--End Item Description-->
+    
+    <!--Commit button-->
+    <button class="btn btn-primary" id="commit-btn">Commit</button>
+    <!--End Commit button-->
+  </div>
+</div>
+
+
+
+
 </body>
 </html>

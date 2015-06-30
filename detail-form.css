@@ -1,0 +1,14 @@
+/* CSS used here will be applied after bootstrap.css */
+.desc{
+  height: 600px;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  word-break: break-all;
+  border-left: solid 1px;
+  border-color: #DBDBDB;
+}
+#commit-btn{
+    margin-right:100px;
+    float:right;
+}

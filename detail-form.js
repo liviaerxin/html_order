@@ -9,14 +9,18 @@ $(document).ready(function(){
     
     /*AJAX to post one form with one item  */
 	$("#commit-btn").click(function(){
-		/*
-    	$.post("http://127.0.0.1:7000/commit",
-    		{suggest: "axn"},
+		
+        /*
+        var data='name=[{"a":1},{"b":2,"c":3}]';
+    	$.post("http://127.0.0.1:7000/commit/item1",
+    		data,
     		function(data,status){
     			alert("Data: " + data + "\nStatus: " + status);
     		}
     		);
-    	*/
+    	
+        */
+        
     	var base_url = "http://127.0.0.1:7000/commit/";
     	$(".tab-content form").each(function(){
     		var data=$(this).serialize();
@@ -31,9 +35,25 @@ $(document).ready(function(){
     			}
     		);
     	});
+        
+        //window.location = "success.html";
 
     });
 	
+    //save-modal button
+    $("#save-modal").click(function(){
+        var result={};
+        var array=$("#myModal").find("form").serializeArray();
+        $.each(array,function(i, field){
+            //alert(field.name + ":" + field.value);
+            result[field.name] = field.value;
+        });
+        var s_result = JSON.stringify(result);  //JSON.stringify([{"a":1},{"b":2}])
+        alert(s_result);
+        
+        var new_val=$("#modal-list").val()+"+"+s_result;
+        $("#modal-list").val(new_val);
+    });
 
 	$("#items").attr("onsubmit", "return validate_form(this)");
 

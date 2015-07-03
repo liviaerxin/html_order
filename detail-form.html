@@ -76,8 +76,85 @@
                   </div>
                   
                 </div>
+                
+                <!--add button modal-->
+                <div class="btn btn-default" id="add-modal" data-target="#myModal" data-toggle="modal">
+                  Add Modal                  
+                </div>
+                
+                <!--modal value-->
+                <div>
+                  <input id="modal-list" name="modal-list" value="">
+                  
+                  </input>
+                </div>
+                <!--modal list-->
+                <div>
+                  <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#">One</a></li>
+                  </ul>
+                </div>
+                <!---->
+
               </div>
             </form>
+
+            <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
+                  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4 class="modal-title">Modal Header</h4>
+                        <h1 class="business-desc">business description</h1>
+                      </div>
+                      <div class="modal-body">
+                        <!--user input form-->
+                        <form class="form">
+                          <div class="row">
+                            <!--first column-->
+                            <div class="col-md-6">
+                              
+                              <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input type="text" class="form-control" name="name">
+                              </div>
+                              
+                              <div class="form-group">
+                                <label for="Address">Addres</label>
+                                <input type="text" class="form-control" name="address">
+                              </div>
+                              
+                            </div>
+                            <!-- End first column-->
+                            <!-- second column-->
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="Phone Number">Phone Number</label>
+                                <input type="text" class="form-control" name="phone-number">
+                              </div>
+                              
+                              <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input type="text" class="form-control" name="email">
+                              </div>
+                            </div>
+                            <!--End sencod column-->
+                          </div>
+                        </form>
+                        <!--End user input form-->
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="save-modal">Save</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!--End Modal-->
             <!--End Detail Form-->
           </div>
           <!--End item 1-->    
@@ -102,7 +179,7 @@
                   <div class="col-md-4">
                      <div class="form-group">
                        <label for="InputAge">Age</label>
-                       <input type="text" class="form-control" name="age1" placeholder="Enter age">
+                       <input type="text" class="form-control" name="age" placeholder="Enter age">
                      </div>
                   </div>
                   

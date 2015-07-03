@@ -4,7 +4,7 @@
 industries finance data interface, response is JSON style
 """
 from bottle import route, request, run, response, hook
-
+import json
 @hook('after_request')
 def enable_cors():
     response.headers['Access-Control-Allow-Origin'] = '*'

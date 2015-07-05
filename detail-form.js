@@ -48,12 +48,41 @@ $(document).ready(function(){
             //alert(field.name + ":" + field.value);
             result[field.name] = field.value;
         });
-        var s_result = JSON.stringify(result);  //JSON.stringify([{"a":1},{"b":2}])
+        var s_result = JSON.stringify(result);  //JSON.stringify({"a":1,"b":2})
         alert(s_result);
         
-        var new_val=$("#modal-list").val()+"+"+s_result;
-        $("#modal-list").val(new_val);
+        //show new address to modal-list to show
+        //result['address']
+
+        $("#modal-list").append('<li><a href="#">'+ result['address'] +'</a><a style="display:none">'+s_result+'</a></li>');
+        //add new form value to modal-total
+        var new_val=$("#modal-total").val()+"+"+s_result;
+        $("#modal-total").val(new_val);
     });
+
+
+    //click modal list address item to show it's detail modal form
+    //!!!!Important:
+    //Use $(document).on('click','selector',function(){}) method to replace click(function(){}) to make click event still be able on the added element
+    $(document).on('click', "#modal-list a", function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        //JSON String
+        var s_result=$(this).parent().find("a[style]").text();
+        //alert(s_result);
+        //JSON Object
+        var result=$.parseJSON(s_result);
+
+        var form=$("#myModal").find("form");
+
+        form.find("input[name]").each(function(index, el) {
+            $(el).val(result[$(el).attr('name')]);
+        });
+
+        $("#myModal").modal("show");
+    });
+
+
 
 	$("#items").attr("onsubmit", "return validate_form(this)");
 

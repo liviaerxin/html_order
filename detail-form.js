@@ -49,12 +49,15 @@ $(document).ready(function(){
             result[field.name] = field.value;
         });
         var s_result = JSON.stringify(result);  //JSON.stringify({"a":1,"b":2})
-        alert(s_result);
+        //alert(s_result);
         
         //show new address to modal-list to show
         //result['address']
 
-        $("#modal-list").append('<li><a href="#">'+ result['address'] +'</a><a style="display:none">'+s_result+'</a></li>');
+        $("#modal-list").append('<li><a href="#" style="float:left;width:95%">'+ result['address'] + '</a>'+
+            '<span href="#" class="glyphicon glyphicon-remove remove-btn btn" aria-hidden="true"></span>'+
+            '<a style="display:none">'+s_result+'</a></li>'
+           );
         //add new form value to modal-total
         var new_val=$("#modal-total").val()+"+"+s_result;
         $("#modal-total").val(new_val);
@@ -68,7 +71,7 @@ $(document).ready(function(){
         event.preventDefault();
         /* Act on the event */
         //JSON String
-        var s_result=$(this).parent().find("a[style]").text();
+        var s_result=$(this).parent().find('a[style="display:none"]').text();
         //alert(s_result);
         //JSON Object
         var result=$.parseJSON(s_result);
@@ -82,12 +85,25 @@ $(document).ready(function(){
         $("#myModal").modal("show");
     });
 
+    /*remove item when click remove-button*/
+    $(document).on('click', '.remove-btn', function(event) {
+        event.preventDefault();
+        $(this).parent().remove();
+    });
+    /*change remove-button color when mouse moving on*/
+    $(document).on('mouseenter', '.remove-btn', function() {
+        
+        $(this).css("color","red");
+    });
+    $(document).on('mouseleave', '.remove-btn', function() {
 
+        $(this).css("color","#333");
+    });
 
 	$("#items").attr("onsubmit", "return validate_form(this)");
 
-})
+});
 var validate_form = function(thisform){
 		alert("bbbb");
 		return true;
-	};
+};

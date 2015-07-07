@@ -40,8 +40,9 @@ $(document).ready(function(){
 
     });
 	
-    //save-modal button
-    $("#save-modal").click(function(){
+    var modaltotal = new Object();
+    //save-modal button to add new address
+    $(document).on("click","#save-modal",function(){
         var result={};
         var array=$("#myModal").find("form").serializeArray();
         $.each(array,function(i, field){
@@ -53,20 +54,61 @@ $(document).ready(function(){
         
         //show new address to modal-list to show
         //result['address']
+        //if result['address'] not existed ,add it
+        var add=result['address'];
+        if (typeof(modaltotal[add]) == "undefined"){
 
-        $("#modal-list").append('<li><a href="#" style="float:left;width:95%">'+ result['address'] + '</a>'+
-            '<span href="#" class="glyphicon glyphicon-remove remove-btn btn" aria-hidden="true"></span>'+
-            '<a style="display:none">'+s_result+'</a></li>'
-           );
-        //add new form value to modal-total
-        var new_val=$("#modal-total").val()+"+"+s_result;
-        $("#modal-total").val(new_val);
+            $("#modal-list").append('<li><a href="#" style="float:left;width:95%" data-address="'+result['address']+'">'+ result['address'] + '</a>'+
+                '<span href="#" class="glyphicon glyphicon-remove remove-btn btn" aria-hidden="true"></span>'+
+                '<a style="display:none">'+s_result+'</a></li>'
+            );
+            //add new form value to modal-total and modaltotal Array
+            modaltotal[add] = s_result;
+            var new_val=$("#modal-total").val()+"+"+s_result;
+            $("#modal-total").val(new_val);
+        }else{
+            alert(result['address'] + "is existed!");
+        }
+        
     });
 
+    //modify-modal button to modify current address
+    $(document).on("click","#modify-modal",function(event) {
+        /* Act on the event */
+        //previous address
+        var address = $("#modify-modal").attr('data-address');
+
+        //modified address and info
+        var result={};
+        var array=$("#myModal").find("form").serializeArray();
+        $.each(array,function(i, field){
+            //alert(field.name + ":" + field.value);
+            result[field.name] = field.value;
+        });
+        var s_result = JSON.stringify(result);  //JSON.stringify({"a":1,"b":2})
+        var modified_address = result['address'];
+
+
+
+        //replace previous address with modified address
+        var li = $('a[data-address="' + address + '"]').parent();
+        alert("Notice:!! "+li.find('a[href]').attr('data-address') + " will be modified!");
+        li.find('a[style="display:none"]').text(s_result);
+        li.find('a[href]').text(modified_address);
+        li.find('a[href]').attr('data-address', modified_address);
+
+        
+
+        //reset modify button to save model
+        $("#modify-modal").attr('data-address', '');
+        $("#modify-modal").attr('id', 'save-modal');
+        
+    });
 
     //click modal list address item to show it's detail modal form
     //!!!!Important:
-    //Use $(document).on('click','selector',function(){}) method to replace click(function(){}) to make click event still be able on the added element
+    //Use $(document).on('click','selector',function(){}) method to replace click(function(){}) to make 
+    //click event still be able on the added element
     $(document).on('click', "#modal-list a", function(event) {
         event.preventDefault();
         /* Act on the event */
@@ -82,6 +124,8 @@ $(document).ready(function(){
             $(el).val(result[$(el).attr('name')]);
         });
 
+        $("#save-modal").attr('data-address', result['address']);
+        $("#save-modal").attr('id', 'modify-modal');
         $("#myModal").modal("show");
     });
 
@@ -100,8 +144,22 @@ $(document).ready(function(){
         $(this).css("color","#333");
     });
 
-	$("#items").attr("onsubmit", "return validate_form(this)");
 
+    //html5 localStorage
+    // Check browser support
+    if (typeof(window.Storage) != "undefined"){
+        // Code for localStorage/sessionStorage.
+    }else{
+        // Sorry! No Web Storage support..
+    }
+    localStorage = window.localStorage
+
+
+
+
+
+    //validate the form
+    $("#items").attr("onsubmit", "return validate_form(this)");
 });
 var validate_form = function(thisform){
 		alert("bbbb");
